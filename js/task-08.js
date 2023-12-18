@@ -5,11 +5,13 @@ loginForm.addEventListener("submit", (event) => {
     const formData = {};
 
     for (const input of loginForm.elements) {
-            if (input.name && input.value === "") {
+        if (input.name) {
+            if (input.value === "") {
                 alert("Please fill all fields.");
                 return;
             }
-            formData[input.name] = input.value;
+        formData[input.name] = input.value;
+    }
     }
     console.log(formData);
     loginForm.reset();
